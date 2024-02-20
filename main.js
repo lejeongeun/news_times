@@ -3,7 +3,7 @@ let news = [] // 전역변수로 지정
 const getLatestNews = async () =>{
     // url을 사용할 경우 이미 js에서 만들어둔 URL인스턴스 사용
     const url = new URL(
-        `https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`
+        `https://bright-boba-89b610.netlify.app/top-headlines?country=us&apiKey=${API_KEY}`
         );
         //fetch(): url 호출 , async await를 통해 기다려줘야 함..
     const response = await fetch(url);
@@ -12,3 +12,5 @@ const getLatestNews = async () =>{
     console.log("ddd", news);
 };
 getLatestNews();
+
+// https://bright-boba-89b610.netlify.app/

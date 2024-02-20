@@ -1,0 +1,10 @@
+.head-line{
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+
+}
+.head-line svg{
+    width: 430px;
+    
+}

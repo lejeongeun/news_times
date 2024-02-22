@@ -1,4 +1,4 @@
-const API_KEY = `941d455169354b78989df64c805f044a`
+//const API_KEY = `941d455169354b78989df64c805f044a`
 // https://bright-boba-89b610.netlify.app/ : my netlify 주소
 let newsList = [] // 전역변수로 지정
 
@@ -23,8 +23,8 @@ menus.forEach(menu => menu.addEventListener("click", (event)=>getNewsByCategory(
 const getLatestNews = async () =>{
     //URL인스턴스 사용
     const url = new URL(
-        `https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`
-        // `https://bright-boba-89b610.netlify.app/top-headlines?&country=kr`
+        //`https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`
+        `https://bright-boba-89b610.netlify.app/top-headlines?&country=kr`
         );
         
     const response = await fetch(url);

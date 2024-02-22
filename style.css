@@ -27,7 +27,6 @@
     background-color: beige;
 }
 .news-img-size{
-    /* 부모 넓이의 100% */
     max-width: 100%;
     max-height: 250px;
     
@@ -37,3 +36,73 @@
     padding-bottom: 10px;
 
 }
+#searchIcon { 
+    font-size: 3em;
+}
+#search {
+    border: solid 2px lightgray;
+    border-radius: 10px;
+    width: 40%;
+    margin-top: 20.8px;
+    margin-left: 12.5%;
+    display: none;
+    outline: none;
+    cursor: text;
+}
+
+#clear {
+    display: none;
+    text-align: end;
+    width: 5%;
+    margin-top: -1.5em;
+    margin-left: 82%;
+    display: none; 
+}
+
+#clear:hover {
+    cursor: pointer;
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }

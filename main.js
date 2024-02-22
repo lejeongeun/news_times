@@ -10,6 +10,19 @@ const openSearchBox = () => {
       inputArea.style.display = "inline";
     }
   };
+const searchNews = async() =>{
+    // keword변수에 search-input(검색창)에 입력한 값 받기
+    const keword = document.getElementById("search-input").value; 
+    console.log("keyword", keword);
+    const url = new URL(
+        `https://bright-boba-89b610.netlify.app/top-headlines?&country=kr&q=${keword}`
+    );
+    const response = await fetch(url);
+    const data = await response.json();
+    newsList = data.articles; // newsList에 보여주고 싶은 data인 data.articles 담기
+    render(); // ui 구현
+    console.log("keyword",newsList)
+};
 // 메뉴 sidebar!
 const openNav = () => {
   document.getElementById("mySidenav").style.width = "250px";

@@ -1,3 +1,6 @@
+body{
+    background-color: rgb(241, 241, 241);
+}
 .head-line{
     margin-top: 1em;
     display: flex;
@@ -14,8 +17,9 @@
     justify-content: center;
 
     flex-wrap: wrap; 
-    border-top: 1px solid #ebebeb;
+    border-top: 1px solid #f2efef;
     border-bottom: 4px double black;
+    
 }
 .menus button{
     border:none;
@@ -88,6 +92,10 @@
 .sidenav a:hover {
     color: #f1f1f1;
 }
+.pagination{
+    display: flex;
+    justify-content: center;
+}
 
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
@@ -97,6 +105,7 @@
     font-size: 36px;
     margin-left: 50px;
 }
+
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}

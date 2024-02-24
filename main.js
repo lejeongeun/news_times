@@ -1,4 +1,4 @@
-const API_KEY = `941d455169354b78989df64c805f044a`
+// const API_KEY = `941d455169354b78989df64c805f044a`
 // https://bright-boba-89b610.netlify.app/ : my netlify 주소
 let newsList = [] // 전역변수로 지정
 let totalResults = 0;
@@ -22,8 +22,8 @@ const searchNews = async() =>{
     const keyword = document.getElementById("search-input").value; 
     console.log("keyword", keyword);
     url = new URL(
-        `https://newsapi.org/v2/top-headlines?country=kr&q=${keyword}&apiKey=${API_KEY}`
-        //`https://bright-boba-89b610.netlify.app/top-headlines?&country=kr&q=${keyword}`
+        //`https://newsapi.org/v2/top-headlines?country=kr&q=${keyword}&apiKey=${API_KEY}`
+        `https://bright-boba-89b610.netlify.app/top-headlines?&country=kr&q=${keyword}`
     );
     getNews();
     console.log("keyword",newsList);
@@ -41,8 +41,8 @@ menus.forEach(menu => menu.addEventListener("click", (event)=>getNewsByCategory(
 
 
 let url = new URL( // url을 Let 으로정의, 각 함수에서는 url을 재정의하여  getNes에서의 url로 이동
-    `https://newsapi.org/v2/top-headlines?country=kr&apiKey=${API_KEY}`
-    //`https://bright-boba-89b610.netlify.app/top-headlines?&country=kr`
+    //`https://newsapi.org/v2/top-headlines?country=kr&apiKey=${API_KEY}`
+    `https://bright-boba-89b610.netlify.app/top-headlines?&country=kr`
 );
 const getNews = async() =>{ // 중복 코드 리팩토링
     try{
@@ -74,8 +74,8 @@ const getNews = async() =>{ // 중복 코드 리팩토링
 const getLatestNews = async () =>{
     //URL인스턴스 사용
     url = new URL(
-        `https://newsapi.org/v2/top-headlines?country=kr&apiKey=${API_KEY}`
-        //`https://bright-boba-89b610.netlify.app/top-headlines?&country=kr`
+        //`https://newsapi.org/v2/top-headlines?country=kr&apiKey=${API_KEY}`
+        `https://bright-boba-89b610.netlify.app/top-headlines?&country=kr`
         );
     getNews();
 };
@@ -84,8 +84,8 @@ const getNewsByCategory = async (event) => {
     const category = event.target.textContent.toLowerCase(); // event로 category받아오기
     console.log("category", category);
     url = new URL(
-        `https://newsapi.org/v2/top-headlines?country=kr&category=${category}&apiKey=${API_KEY}`
-        //`https://bright-boba-89b610.netlify.app/top-headlines?&country=kr&category=${category}`
+        //`https://newsapi.org/v2/top-headlines?country=kr&category=${category}&apiKey=${API_KEY}`
+        `https://bright-boba-89b610.netlify.app/top-headlines?&country=kr&category=${category}`
         );
     getNews();
 };
